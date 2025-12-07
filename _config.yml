@@ -17,8 +17,8 @@
 # Feel free to change these! For more info, refer to:
 # ~> https://jekyllrb.com/docs/configuration/options/
 
-title:            'Wax'
-description:      'Minimal Exhibitions with Jekyll'
+title:            'Syrian Refugee Exhibition'
+description:      'A digital exhibition showcasing Syrian refugee art and stories of displacement, resilience, and hope'
 url:              'https://izakt7.github.io'
 baseurl:          '/syrian-refugee-art'
 copyright:        'Example copyright org, 2023'
@@ -123,9 +123,9 @@ menu:
         link: '/credits/'
   - label: 'Exhibits'
     sub:
-      - label: 'Inline Parallax Image'
+      - label: 'Migration and Displacement'
         link: '/exhibits/a/'
-      - label: 'Inline Image References'
+      - label: 'Resilience and Hope'
         link: '/exhibits/b/'
   - label: 'Browse'
     link: '/collection/'
