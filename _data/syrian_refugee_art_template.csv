@@ -1,0 +1,12 @@
+pid,title,artist,date,description,medium,location,layout,collection,thumbnail,full,manifest
+artwork1,Example Title 1,Artist Name,2020,Description of artwork 1,Photography,Damascus,syrian_refugee_art_item,syrian_refugee_art,,
+artwork2,Example Title 2,Artist Name,2021,Description of artwork 2,Oil Painting,Jordan,syrian_refugee_art_item,syrian_refugee_art,,
+artwork3,Example Title 3,Artist Name,2019,Description of artwork 3,Drawing,Lebanon,syrian_refugee_art_item,syrian_refugee_art,,
+artwork4,Example Title 4,Artist Name,2020,Description of artwork 4,Photography,Turkey,syrian_refugee_art_item,syrian_refugee_art,,
+artwork5,Example Title 5,Artist Name,2021,Description of artwork 5,Mixed Media,Syria,syrian_refugee_art_item,syrian_refugee_art,,
+artwork6,Example Title 6,Artist Name,2019,Description of artwork 6,Photography,Jordan,syrian_refugee_art_item,syrian_refugee_art,,
+artwork7,Example Title 7,Artist Name,2020,Description of artwork 7,Oil Painting,Lebanon,syrian_refugee_art_item,syrian_refugee_art,,
+artwork8,Example Title 8,Artist Name,2021,Description of artwork 8,Drawing,Turkey,syrian_refugee_art_item,syrian_refugee_art,,
+artwork9,Example Title 9,Artist Name,2019,Description of artwork 9,Photography,Syria,syrian_refugee_art_item,syrian_refugee_art,,
+artwork10,Example Title 10,Artist Name,2020,Description of artwork 10,Mixed Media,Jordan,syrian_refugee_art_item,syrian_refugee_art,,
+

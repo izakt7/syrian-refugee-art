@@ -1,0 +1,61 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/collection/syrian_refugee_art.json",
+  "@type": "sc:Collection",
+  "label": "syrian_refugee_art",
+  "manifests": [
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork6/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "artwork6"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork7/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "artwork7"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork5/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "artwork5"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork4/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "artwork4"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork1/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "artwork1"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork3/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "artwork3"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork2/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "artwork2"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork9/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "artwork9"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork10/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "artwork10"
+    },
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork8/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "artwork8"
+    }
+  ]
+}

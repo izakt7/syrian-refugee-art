@@ -1,0 +1,62 @@
+---
+layout: default
+pagination: true
+meta:
+  - label: 'Title'
+    value: page.title
+  - label: 'Artist'
+    value: page.artist
+  - label: 'Date'
+    value: page._date
+  - label: 'Description'
+    value: page.description
+  - label: 'Medium'
+    value: page.medium
+  - label: 'Location'
+    value: page.location
+  - label: 'Video'
+    value: page.video_url
+    type: link
+  - label: 'Audio'
+    value: page.audio_url
+    type: link
+---
+
+{% comment %}
+  The block below controls the media viewer (image, video, or audio)
+{% endcomment %}
+
+<h3 alt="{{ page.title | escape }}" class='item-label'>{{ page.title }}</h3>
+<div class='item-view'>
+  <span class='pagination-link' id='prevlink'></span>
+
+  {% comment %} Check for video first {% endcomment %}
+  {% if page.video_url.size > 0 %}
+    {% include video_player.html video_url=page.video_url poster=page.thumbnail %}
+  {% comment %} Check for audio second {% endcomment %}
+  {% elsif page.audio_url.size > 0 %}
+    {% include audio_player.html audio_url=page.audio_url audio_transcript=page.audio_transcript %}
+  {% comment %} Otherwise show image {% endcomment %}
+  {% elsif page.manifest.size > 0 %}
+    {% include osd_iiif_image_viewer.html manifest=page.manifest %}
+  {% elsif page.full.size > 0 %}
+    {% include simple_image_viewer.html full_image=page.full %}
+  {% endif %}
+  
+  <span class='pagination-link' id='nextlink'></span>
+</div>
+{% unless layout.pagination == false %}{% include item_pagination.html %}{% endunless %}
+
+{% comment %}
+  The block below controls the item metadata table
+{% endcomment %}
+
+{% if layout.meta.size %}
+  {% assign metadata = layout.meta %}
+{% elsif page.meta.size %}
+  {% assign metadata = page.meta %}
+{% endif %}
+{% if metadata.size %}
+  {% include item_metadata.html meta=metadata %}
+{% endif %}
+

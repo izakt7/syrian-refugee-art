@@ -1,0 +1,54 @@
+<div class="audio-viewer">
+  {% if include.audio_url %}
+    <audio controls class="audio-player">
+      <source src="{{ include.audio_url | absolute_url }}" type="audio/mpeg">
+      <source src="{{ include.audio_url | absolute_url }}" type="audio/ogg">
+      <source src="{{ include.audio_url | absolute_url }}" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+    {% if include.audio_transcript %}
+      <details class="audio-transcript">
+        <summary>View Transcript</summary>
+        <div class="transcript-content">
+          {{ include.audio_transcript | markdownify }}
+        </div>
+      </details>
+    {% endif %}
+  {% endif %}
+</div>
+
+<style>
+.audio-viewer {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+.audio-player {
+  width: 100%;
+  max-width: 100%;
+}
+
+.audio-transcript {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.audio-transcript summary {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.audio-transcript summary:hover {
+  color: #0066cc;
+}
+
+.transcript-content {
+  margin-top: 10px;
+  padding: 10px;
+}
+</style>
+

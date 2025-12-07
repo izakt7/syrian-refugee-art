@@ -1,0 +1,50 @@
+---
+layout: none
+---
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/artwork10/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "artwork10",
+  "thumbnail": "{{ '/' | absolute_url }}img/derivatives/iiif/images/artwork10/full/250,/0/default.jpg",
+  "viewingDirection": "left-to-right",
+  "viewingHint": "individuals",
+  "sequences": [
+    {
+      "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/sequence/artwork10.json",
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/canvas/artwork10.json",
+          "label": "front",
+          "width": 2560,
+          "height": 1920,
+          "thumbnail": "{{ '/' | absolute_url }}img/derivatives/iiif/images/artwork10/full/250,/0/default.jpg",
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/annotation/artwork10.json",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/images/artwork10/full/full/0/default.jpg",
+                "@type": "dcterms:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "{{ '/' | absolute_url }}img/derivatives/iiif/images/artwork10",
+                  "profile": "http://iiif.io/api/image/2/level0.json"
+                },
+                "width": 2560,
+                "height": 1920
+              },
+              "on": "{{ '/' | absolute_url }}img/derivatives/iiif/canvas/artwork10.json"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "full": "{{ '/' | absolute_url }}img/derivatives/iiif/images/artwork10/full/full/0/default.jpg",
+  "fullwidth": "{{ '/' | absolute_url }}img/derivatives/iiif/images/artwork10/full/1140,/0/default.jpg"
+}

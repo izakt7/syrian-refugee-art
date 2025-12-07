@@ -1,0 +1,69 @@
+<div class="video-viewer">
+  {% if include.video_url %}
+    {% if include.video_url contains 'youtube.com' or include.video_url contains 'youtu.be' %}
+      {% comment %} YouTube embed {% endcomment %}
+      {% assign video_id = include.video_url | split: '/' | last | split: '?' | first %}
+      {% if include.video_url contains 'youtu.be' %}
+        {% assign video_id = include.video_url | split: '/' | last | split: '?' | first %}
+      {% else %}
+        {% assign video_id = include.video_url | split: 'v=' | last | split: '&' | first %}
+      {% endif %}
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ video_id }}" allowfullscreen></iframe>
+      </div>
+    {% elsif include.video_url contains 'vimeo.com' %}
+      {% comment %} Vimeo embed {% endcomment %}
+      {% assign video_id = include.video_url | split: '/' | last | split: '?' | first %}
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/{{ video_id }}" allowfullscreen></iframe>
+      </div>
+    {% else %}
+      {% comment %} Direct video file {% endcomment %}
+      <video controls class="video-player" {% if include.poster %}poster="{{ include.poster | absolute_url }}"{% endif %}>
+        <source src="{{ include.video_url | absolute_url }}" type="video/mp4">
+        <source src="{{ include.video_url | absolute_url }}" type="video/webm">
+        <source src="{{ include.video_url | absolute_url }}" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+    {% endif %}
+  {% endif %}
+</div>
+
+<style>
+.video-viewer {
+  width: 100%;
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+.video-player {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive::before {
+  content: "";
+  display: block;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.embed-responsive-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+</style>
+

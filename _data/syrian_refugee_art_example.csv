@@ -1,0 +1,4 @@
+pid,title,artist,date,description,medium,location,layout,collection,thumbnail,full,manifest
+artwork1,Example Artwork 1,Artist Name,2020,This is a description of the first artwork,Photography,Damascus,syrian_refugee_art_item,syrian_refugee_art,/img/derivatives/iiif/images/artwork1/full/250,/0/default.jpg,/img/derivatives/iiif/images/artwork1/full/1140,/0/default.jpg,/img/derivatives/iiif/artwork1/manifest.json
+artwork2,Example Artwork 2,Another Artist,2021,This is a description of the second artwork,Oil Painting,Jordan,syrian_refugee_art_item,syrian_refugee_art,/img/derivatives/iiif/images/artwork2/full/250,/0/default.jpg,/img/derivatives/iiif/images/artwork2/full/1140,/0/default.jpg,/img/derivatives/iiif/artwork2/manifest.json
+
