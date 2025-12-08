@@ -53,8 +53,8 @@ var artworks = {
     description: {{ item.description | jsonify }},
     medium: {{ item.medium | jsonify }},
     location: {{ item.location | jsonify }},
-    thumbnail: {{ item.thumbnail | jsonify }},
-    url: {{ item.url | jsonify }}
+    thumbnail: {{ item.thumbnail | absolute_url | jsonify }},
+    url: {{ item.url | absolute_url | jsonify }}
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 };
@@ -91,9 +91,13 @@ function displayComparison(artwork1, artwork2) {
   var item1Div = document.getElementById('artwork-1-details');
   var item2Div = document.getElementById('artwork-2-details');
   
+  // Thumbnails are already absolute URLs from Jekyll's absolute_url filter
+  var thumb1 = artwork1.thumbnail || '{{ "/assets/default.png" | absolute_url }}';
+  var thumb2 = artwork2.thumbnail || '{{ "/assets/default.png" | absolute_url }}';
+  
   item1Div.innerHTML = `
     <h4><a href="${artwork1.url}">${artwork1.title}</a></h4>
-    <img src="${artwork1.thumbnail}" alt="${artwork1.title}" style="width: 100%; max-width: 400px; margin: 15px 0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <img src="${thumb1}" alt="${artwork1.title}" style="width: 100%; max-width: 400px; margin: 15px 0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" onerror="this.onerror=null; this.src='{{ "/assets/default.png" | absolute_url }}';">
     <table style="width: 100%; margin-top: 15px;">
       <tr><td style="padding: 5px 0;"><strong>Artist:</strong></td><td style="padding: 5px 0;">${artwork1.artist}</td></tr>
       <tr><td style="padding: 5px 0;"><strong>Date:</strong></td><td style="padding: 5px 0;">${artwork1.date || 'N/A'}</td></tr>
@@ -109,7 +113,7 @@ function displayComparison(artwork1, artwork2) {
   
   item2Div.innerHTML = `
     <h4><a href="${artwork2.url}">${artwork2.title}</a></h4>
-    <img src="${artwork2.thumbnail}" alt="${artwork2.title}" style="width: 100%; max-width: 400px; margin: 15px 0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <img src="${thumb2}" alt="${artwork2.title}" style="width: 100%; max-width: 400px; margin: 15px 0; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" onerror="this.onerror=null; this.src='{{ "/assets/default.png" | absolute_url }}';">
     <table style="width: 100%; margin-top: 15px;">
       <tr><td style="padding: 5px 0;"><strong>Artist:</strong></td><td style="padding: 5px 0;">${artwork2.artist}</td></tr>
       <tr><td style="padding: 5px 0;"><strong>Date:</strong></td><td style="padding: 5px 0;">${artwork2.date || 'N/A'}</td></tr>

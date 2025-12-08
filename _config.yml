@@ -139,6 +139,8 @@ menu:
     link: '/impact/'
   - label: 'Search'
     link: '/search/'
+  - label: 'Sources'
+    link: '/sources/'
   - label: 'Reuse'
     link: '/reuse/'
 
