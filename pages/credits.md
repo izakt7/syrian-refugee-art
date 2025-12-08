@@ -4,10 +4,52 @@ title: Credits & Contact
 permalink: '/credits/'
 ---
 
-Wax is a minimal computing ([minicomp](https://github.com/minicomp)) project led and maintained by [Marii Nyrop](https://marii.info/) and [Alex Gil](https://github.com/elotroalex).
+## Credits
 
-It uses open source libraries and frameworks including [Jekyll](https://jekyllrb.com), [IIIF](http://iiif.io), [OpenSeaDragon](https://openseadragon.github.io/), and [ElasticLunr](http://elasticlunr.com/) and builds upon work by [Peter Binkley](https://github.com/pbinkley), [David Newbury](https://github.com/workergnome), and others.
+### Exhibition
 
-We welcome and encourage contributibutions. Please get in touch, or [fork the project on GitHub](https://github.com/minicomp/wax). If you encounter any issue with the software, please [create an issue](https://github.com/minicomp/wax/issues) or find us in the **#minicomp-wax** channel within the [Code4Lib Slack](https://code4lib.slack.com). (Request an invite [here](https://docs.google.com/forms/d/e/1FAIpQLSeD77mBp0Y13mFePF8UmDwFrlbxNx3VttEjz_3dgglJeK-Zbg/viewform?c=0&w=1)!)
+**Syrian Refugee Art Exhibition**  
+A digital exhibition showcasing works by artists who have documented and expressed the experiences of displacement, resilience, and hope.
 
-For more on working with Wax, visit our [documentation wiki](https://minicomp.github.io/wiki/wax/).
+### Artists
+
+This exhibition features works by:
+- **Helen Zughaib** - Syrian Migration Series
+- **The Atlantic** - Documentary video works
+- Additional artists credited on individual artwork pages
+
+### Platform & Technology
+
+This exhibition is built using **[Wax](https://minicomp.github.io/wiki/wax/)**, a minimal computing framework for creating digital exhibitions.
+
+**Wax** is a minimal computing ([minicomp](https://github.com/minicomp)) project led and maintained by [Marii Nyrop](https://marii.info/) and [Alex Gil](https://github.com/elotroalex).
+
+### Open Source Libraries & Frameworks
+
+- **[Jekyll](https://jekyllrb.com)** - Static site generator
+- **[IIIF](http://iiif.io)** - International Image Interoperability Framework
+- **[OpenSeaDragon](https://openseadragon.github.io/)** - Image viewer
+- **[ElasticLunr](http://elasticlunr.com/)** - Search functionality
+- **[Leaflet.js](https://leafletjs.com/)** - Interactive maps
+- **[OpenStreetMap](https://www.openstreetmap.org/)** - Map tiles
+
+### Data Sources
+
+Statistics and data are sourced from:
+- **[UNHCR](https://www.unhcr.org/)** - United Nations High Commissioner for Refugees
+- **[USA for UNHCR](https://www.unrefugees.org/)** - Humanitarian organization
+- Additional sources listed on our [Sources page](/sources/)
+
+### Acknowledgments
+
+We thank all the artists, organizations, and individuals who have contributed to documenting and sharing the stories of Syrian refugees. Your work helps preserve important cultural heritage and fosters understanding across communities.
+
+### Contributing
+
+We welcome contributions, corrections, and suggestions. If you encounter any issues or have feedback, please contact us or [create an issue on GitHub](https://github.com/izakt7/syrian-refugee-art/issues).
+
+For more information about Wax, visit the [documentation wiki](https://minicomp.github.io/wiki/wax/).
+
+---
+
+[← Back to Home](/)
