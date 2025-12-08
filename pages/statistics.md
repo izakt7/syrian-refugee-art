@@ -9,7 +9,7 @@ permalink: /statistics/
 Explore data visualizations that help contextualize the artworks in this collection. All statistics are sourced from UNHCR and verified humanitarian organizations as of 2024.
 
 <div style="margin: 20px 0; padding: 15px; background-color: #e7f3ff; border-left: 4px solid #0066cc; border-radius: 4px;">
-  <strong>📊 Data Sources:</strong> Statistics compiled from <a href="https://www.unhcr.org/" target="_blank">UNHCR</a>, <a href="https://www.unrefugees.org/" target="_blank">USA for UNHCR</a>, and other verified humanitarian organizations. Last updated: December 2024. <a href="/sources/">View all sources →</a>
+  <strong>📊 Data Sources:</strong> Statistics compiled from <a href="https://www.unhcr.org/" target="_blank">UNHCR</a>, <a href="https://www.unrefugees.org/" target="_blank">USA for UNHCR</a>, and other verified humanitarian organizations. Last updated: December 2024. <a href="{{ '/sources/' | absolute_url }}">View all sources →</a>
 </div>
 
 ### Scale of Displacement
@@ -220,7 +220,7 @@ Explore data visualizations that help contextualize the artworks in this collect
 
 ### Sources
 
-All statistics are sourced from verified humanitarian organizations. For complete citations and references, see our [Sources page](/sources/).
+All statistics are sourced from verified humanitarian organizations. For complete citations and references, see our [Sources page]({{ '/sources/' | absolute_url }}).
 
 ---
 
