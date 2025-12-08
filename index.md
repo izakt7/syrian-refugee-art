@@ -16,57 +16,33 @@ This exhibition brings together artworks created by Syrian artists and refugees 
 ### Take Action
 
 <div class="cta-buttons" style="display: flex; flex-wrap: wrap; gap: 15px; margin: 30px 0; justify-content: center;">
-  <a href="/donate/" class="btn btn-primary" style="padding: 12px 24px; background-color: #0066cc; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Donate / Volunteer</a>
-  <a href="/fact-check/" class="btn btn-secondary" style="padding: 12px 24px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Share Responsibility (Fact Check Card)</a>
-  <a href="/contact-rep/" class="btn btn-tertiary" style="padding: 12px 24px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Message Your Rep</a>
+  <a href="https://give.unrefugees.org/180101syr_mainpg_p_3000/?utm_medium=referral&utm_source=donate.unhcr.org&utm_campaign=US_PS_EN_SY_____250407&utm_content=syr&SF_onetime=701Rf00000PzDRmIAN&SF_monthly=701Rf00000PyzQTIAZ&_gl=1*1u6uwpw*_gcl_au*NDQ0MTM0NTY4LjE3NjUxNjQzNjU.*_rup_ga*NTIxNjk5MzAwLjE3NjUxNjQzNjU.*_rup_ga_EVDQTJ4LMY*czE3NjUxNjQzNjQkbzEkZzEkdDE3NjUxNjQzOTEkajMzJGwwJGgw*_ga*NTIxNjk5MzAwLjE3NjUxNjQzNjU.*_ga_X2YZPJ1XWR*czE3NjUxNjQzNjQkbzEkZzEkdDE3NjUxNjQzOTEkajMzJGwwJGgw&amt=30" target="_blank" class="btn btn-primary" style="padding: 12px 24px; background-color: #0066cc; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Donate / Volunteer</a>
+  <a href="{{ '/fact-check/' | absolute_url }}" class="btn btn-secondary" style="padding: 12px 24px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Share Responsibility (Fact Check Card)</a>
+  <a href="{{ '/contact-rep/' | absolute_url }}" class="btn btn-tertiary" style="padding: 12px 24px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Message Your Rep</a>
 </div>
-
-<div class="impact-counter-home" style="margin: 30px 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; text-align: center;">
-  <h4 style="color: white; margin-bottom: 10px;">Community Impact</h4>
-  <div style="font-size: 2em; font-weight: bold; margin-bottom: 5px;" id="home-total-actions">0</div>
-  <div style="opacity: 0.9;">actions taken by visitors</div>
-  <a href="/impact/" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: white; color: #667eea; text-decoration: none; border-radius: 4px; font-weight: bold;">View Impact Dashboard →</a>
-</div>
-
-<script>
-function updateHomeImpactCounter() {
-  if (typeof localStorage !== 'undefined') {
-    var actions = JSON.parse(localStorage.getItem('syrianRefugeeArtActions') || '{}');
-    var totalShares = actions['total_share'] || 0;
-    var totalComparisons = actions['total_compare'] || 0;
-    var totalActions = totalShares + totalComparisons;
-    var counter = document.getElementById('home-total-actions');
-    if (counter) {
-      counter.textContent = totalActions.toLocaleString();
-    }
-  }
-}
-document.addEventListener('DOMContentLoaded', updateHomeImpactCounter);
-setInterval(updateHomeImpactCounter, 5000);
-</script>
 
 ### Explore the Collection
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 30px 0;">
-  <a href="/collection/" style="padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
+  <a href="{{ '/collection/' | absolute_url }}" style="padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
     <div style="font-size: 2em; margin-bottom: 10px;">🖼️</div>
     <div style="font-weight: bold; font-size: 1.1em;">Browse Collection</div>
     <div style="font-size: 0.9em; margin-top: 5px; opacity: 0.9;">View all artworks</div>
   </a>
   
-  <a href="/compare/" style="padding: 20px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
+  <a href="{{ '/compare/' | absolute_url }}" style="padding: 20px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
     <div style="font-size: 2em; margin-bottom: 10px;">⚖️</div>
     <div style="font-weight: bold; font-size: 1.1em;">Compare Artworks</div>
     <div style="font-size: 0.9em; margin-top: 5px; opacity: 0.9;">Side-by-side comparison</div>
   </a>
   
-  <a href="/map/" style="padding: 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
+  <a href="{{ '/map/' | absolute_url }}" style="padding: 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
     <div style="font-size: 2em; margin-bottom: 10px;">🗺️</div>
     <div style="font-weight: bold; font-size: 1.1em;">Interactive Map</div>
     <div style="font-size: 0.9em; margin-top: 5px; opacity: 0.9;">Geographic context</div>
   </a>
   
-  <a href="/statistics/" style="padding: 20px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
+  <a href="{{ '/statistics/' | absolute_url }}" style="padding: 20px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
     <div style="font-size: 2em; margin-bottom: 10px;">📊</div>
     <div style="font-weight: bold; font-size: 1.1em;">Statistics</div>
     <div style="font-size: 0.9em; margin-top: 5px; opacity: 0.9;">Data & insights</div>

@@ -10,9 +10,10 @@ Your support can make a real difference in the lives of Syrian refugees. Here ar
 
 ### Organizations Accepting Donations
 
-**UNHCR (UN Refugee Agency)**
-- [Donate to UNHCR](https://www.unhcr.org/donate/)
+**UNHCR (UN Refugee Agency)** - *Recommended*
+- [Donate to UNHCR for Syrian Refugees](https://give.unrefugees.org/180101syr_mainpg_p_3000/?utm_medium=referral&utm_source=donate.unhcr.org&utm_campaign=US_PS_EN_SY_____250407&utm_content=syr&SF_onetime=701Rf00000PzDRmIAN&SF_monthly=701Rf00000PyzQTIAZ&_gl=1*1u6uwpw*_gcl_au*NDQ0MTM0NTY4LjE3NjUxNjQzNjU.*_rup_ga*NTIxNjk5MzAwLjE3NjUxNjQzNjU.*_rup_ga_EVDQTJ4LMY*czE3NjUxNjQzNjQkbzEkZzEkdDE3NjUxNjQzOTEkajMzJGwwJGgw*_ga*NTIxNjk5MzAwLjE3NjUxNjQzNjU.*_ga_X2YZPJ1XWR*czE3NjUxNjQzNjQkbzEkZzEkdDE3NjUxNjQzOTEkajMzJGwwJGgw&amt=30) (Direct donation link)
 - Provides emergency shelter, food, healthcare, and education to Syrian refugees
+- Your donation directly supports Syrian refugee families
 
 **International Rescue Committee (IRC)**
 - [Donate to IRC](https://www.rescue.org/donate)
