@@ -1,0 +1,114 @@
+<div class="action-tools" style="margin: 30px 0; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+  <h4 style="margin-bottom: 15px;">Take Action</h4>
+  
+  <div class="action-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+    <a href="/donate/" class="btn-action btn-donate" style="padding: 10px 20px; background-color: #0066cc; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+      💙 Donate / Volunteer
+    </a>
+    <a href="/contact-rep/" class="btn-action btn-contact" style="padding: 10px 20px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+      ✉️ Message Your Rep
+    </a>
+    <a href="/fact-check/" class="btn-action btn-fact" style="padding: 10px 20px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+      📋 Share Facts
+    </a>
+  </div>
+
+  <div class="social-share" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #dee2e6;">
+    <h5 style="margin-bottom: 10px; font-size: 1em;">Share This Artwork</h5>
+    <div class="share-buttons" style="display: flex; flex-wrap: wrap; gap: 8px;">
+      {% assign artwork_title = include.title | default: page.title | url_encode %}
+      {% assign artwork_url = page.url | absolute_url | url_encode %}
+      {% assign share_text = "Check out this artwork from the Syrian Refugee Art exhibition: " | append: page.title | url_encode %}
+      
+      <a href="https://twitter.com/intent/tweet?text={{ share_text }}&url={{ artwork_url }}" 
+         target="_blank" 
+         class="share-btn share-twitter"
+         onclick="trackAction('share', 'twitter', '{{ page.pid }}');"
+         style="padding: 8px 16px; background-color: #1da1f2; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9em;">
+        🐦 Twitter
+      </a>
+      
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ artwork_url }}" 
+         target="_blank" 
+         class="share-btn share-facebook"
+         onclick="trackAction('share', 'facebook', '{{ page.pid }}');"
+         style="padding: 8px 16px; background-color: #1877f2; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9em;">
+        📘 Facebook
+      </a>
+      
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ artwork_url }}" 
+         target="_blank" 
+         class="share-btn share-linkedin"
+         onclick="trackAction('share', 'linkedin', '{{ page.pid }}');"
+         style="padding: 8px 16px; background-color: #0077b5; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9em;">
+        💼 LinkedIn
+      </a>
+      
+      <button onclick="copyToClipboard('{{ artwork_url }}'); trackAction('share', 'copy', '{{ page.pid }}');" 
+              class="share-btn share-copy"
+              style="padding: 8px 16px; background-color: #6c757d; color: white; border: none; border-radius: 4px; font-size: 0.9em; cursor: pointer;">
+        📋 Copy Link
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(function() {
+    alert('Link copied to clipboard!');
+  }, function(err) {
+    // Fallback for older browsers
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    alert('Link copied to clipboard!');
+  });
+}
+
+function trackAction(actionType, actionDetail, artworkId) {
+  // Track actions for impact counter
+  if (typeof localStorage !== 'undefined') {
+    var actions = JSON.parse(localStorage.getItem('syrianRefugeeArtActions') || '{}');
+    var key = actionType + '_' + actionDetail + '_' + artworkId;
+    actions[key] = (actions[key] || 0) + 1;
+    actions['total_' + actionType] = (actions['total_' + actionType] || 0) + 1;
+    localStorage.setItem('syrianRefugeeArtActions', JSON.stringify(actions));
+    
+    // Update impact counter if it exists
+    updateImpactCounter();
+  }
+}
+
+function updateImpactCounter() {
+  var actions = JSON.parse(localStorage.getItem('syrianRefugeeArtActions') || '{}');
+  var totalShares = actions['total_share'] || 0;
+  var counter = document.getElementById('total-actions-counter');
+  if (counter) {
+    counter.textContent = totalShares.toLocaleString();
+  }
+}
+
+// Initialize counter on page load
+document.addEventListener('DOMContentLoaded', function() {
+  updateImpactCounter();
+});
+</script>
+
+<style>
+.action-tools .btn-action:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  transition: all 0.2s;
+}
+
+.share-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  transition: all 0.2s;
+}
+</style>
+

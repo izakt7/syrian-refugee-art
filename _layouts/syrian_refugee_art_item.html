@@ -60,3 +60,33 @@ meta:
   {% include item_metadata.html meta=metadata %}
 {% endif %}
 
+{% comment %}
+  Comparison tool
+{% endcomment %}
+{% include artwork_comparison.html %}
+
+{% comment %}
+  Context cards for educational content
+{% endcomment %}
+{% if page._date %}
+  {% assign year = page._date | plus: 0 %}
+  {% if year >= 2011 %}
+    {% include context_card.html 
+       title="Historical Context" 
+       icon="📅"
+       content="This artwork was created during the Syrian civil war, which began in 2011. By this time, millions of Syrians had already been displaced, and the conflict had destroyed cities, separated families, and created one of the largest refugee crises in modern history." %}
+  {% endif %}
+{% endif %}
+
+{% if page.location contains "Jordan" or page.location contains "Lebanon" or page.location contains "Turkey" %}
+  {% include context_card.html 
+     title="Refugee Host Countries" 
+     icon="🌍"
+     content="This artwork is associated with a country that hosts large numbers of Syrian refugees. Turkey hosts over 3.6 million Syrian refugees, Lebanon hosts 1.5 million (the highest per capita), and Jordan hosts 1.3 million. These countries have shouldered a tremendous responsibility in providing refuge." %}
+{% endif %}
+
+{% comment %}
+  Action tools - share and take action
+{% endcomment %}
+{% include action_tools.html title=page.title %}
+

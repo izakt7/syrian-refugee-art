@@ -1,0 +1,25 @@
+<span class="glossary-term" 
+      data-term="{{ include.term }}" 
+      data-definition="{{ include.definition }}"
+      style="color: #0066cc; text-decoration: underline; cursor: help; border-bottom: 1px dotted #0066cc;"
+      onmouseover="showGlossaryTooltip(event, '{{ include.definition }}')"
+      onmouseout="hideGlossaryTooltip()">
+  {{ include.term }}
+</span>
+
+<div id="glossary-tooltip" style="display: none; position: absolute; background-color: #333; color: white; padding: 8px 12px; border-radius: 4px; z-index: 1000; max-width: 300px; font-size: 0.9em; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>
+
+<script>
+function showGlossaryTooltip(event, definition) {
+  var tooltip = document.getElementById('glossary-tooltip');
+  tooltip.textContent = definition;
+  tooltip.style.display = 'block';
+  tooltip.style.left = (event.pageX + 10) + 'px';
+  tooltip.style.top = (event.pageY + 10) + 'px';
+}
+
+function hideGlossaryTooltip() {
+  document.getElementById('glossary-tooltip').style.display = 'none';
+}
+</script>
+

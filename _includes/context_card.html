@@ -1,0 +1,30 @@
+<div class="context-card" style="margin: 20px 0; padding: 15px; background-color: #e7f3ff; border-left: 4px solid #0066cc; border-radius: 4px;">
+  <div class="context-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+    <h5 style="margin: 0; color: #0066cc;">
+      {% if include.icon %}{{ include.icon }} {% endif %}{{ include.title | default: "Context" }}
+    </h5>
+    <button onclick="toggleContextCard(this)" class="context-toggle" style="background: none; border: none; font-size: 1.2em; cursor: pointer; color: #0066cc;">
+      <span class="expand-icon">▼</span>
+    </button>
+  </div>
+  <div class="context-content" style="display: none;">
+    {{ include.content | markdownify }}
+  </div>
+</div>
+
+<script>
+function toggleContextCard(button) {
+  var card = button.closest('.context-card');
+  var content = card.querySelector('.context-content');
+  var icon = button.querySelector('.expand-icon');
+  
+  if (content.style.display === 'none') {
+    content.style.display = 'block';
+    icon.textContent = '▲';
+  } else {
+    content.style.display = 'none';
+    icon.textContent = '▼';
+  }
+}
+</script>
+

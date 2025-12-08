@@ -21,7 +21,33 @@ This exhibition brings together artworks created by Syrian artists and refugees 
   <a href="/contact-rep/" class="btn btn-tertiary" style="padding: 12px 24px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Message Your Rep</a>
 </div>
 
-### Browse the Collection
+### Explore the Collection
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 30px 0;">
+  <a href="/collection/" style="padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
+    <div style="font-size: 2em; margin-bottom: 10px;">🖼️</div>
+    <div style="font-weight: bold; font-size: 1.1em;">Browse Collection</div>
+    <div style="font-size: 0.9em; margin-top: 5px; opacity: 0.9;">View all artworks</div>
+  </a>
+  
+  <a href="/compare/" style="padding: 20px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
+    <div style="font-size: 2em; margin-bottom: 10px;">⚖️</div>
+    <div style="font-weight: bold; font-size: 1.1em;">Compare Artworks</div>
+    <div style="font-size: 0.9em; margin-top: 5px; opacity: 0.9;">Side-by-side comparison</div>
+  </a>
+  
+  <a href="/map/" style="padding: 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
+    <div style="font-size: 2em; margin-bottom: 10px;">🗺️</div>
+    <div style="font-weight: bold; font-size: 1.1em;">Interactive Map</div>
+    <div style="font-size: 0.9em; margin-top: 5px; opacity: 0.9;">Geographic context</div>
+  </a>
+  
+  <a href="/statistics/" style="padding: 20px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; text-decoration: none; border-radius: 8px; text-align: center;">
+    <div style="font-size: 2em; margin-bottom: 10px;">📊</div>
+    <div style="font-weight: bold; font-size: 1.1em;">Statistics</div>
+    <div style="font-size: 0.9em; margin-top: 5px; opacity: 0.9;">Data & insights</div>
+  </a>
+</div>
 
 #### By Medium
 {% include collection_gallery_custom.html facet_by='medium' collection='syrian_refugee_art' %}
