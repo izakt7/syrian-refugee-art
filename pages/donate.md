@@ -46,5 +46,5 @@ Your support can make a real difference in the lives of Syrian refugees. Here ar
 
 ---
 
-[← Back to Home](/)
+[← Back to Home]({{ '/' | absolute_url }})
 

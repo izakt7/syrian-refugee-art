@@ -128,5 +128,5 @@ If you notice any inaccuracies or have questions about sources, please contact u
 
 ---
 
-[← Back to Home](/)
+[← Back to Home]({{ '/' | absolute_url }})
 

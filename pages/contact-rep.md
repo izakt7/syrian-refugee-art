@@ -64,5 +64,5 @@ Sincerely,
 
 ---
 
-[← Back to Home](/)
+[← Back to Home]({{ '/' | absolute_url }})
 

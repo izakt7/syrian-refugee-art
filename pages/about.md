@@ -42,8 +42,8 @@ This exhibition is built using [Wax](https://minicomp.github.io/wiki/wax/), a mi
 
 ### Contact & Feedback
 
-If you have questions, feedback, or would like to contribute to this exhibition, please contact us through the site or visit our [Credits page](/credits/).
+If you have questions, feedback, or would like to contribute to this exhibition, please contact us through the site or visit our [Credits page]({{ '/credits/' | absolute_url }}).
 
 ---
 
-[← Back to Home](/)
+[← Back to Home]({{ '/' | absolute_url }})

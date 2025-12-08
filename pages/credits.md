@@ -38,7 +38,7 @@ This exhibition is built using **[Wax](https://minicomp.github.io/wiki/wax/)**, 
 Statistics and data are sourced from:
 - **[UNHCR](https://www.unhcr.org/)** - United Nations High Commissioner for Refugees
 - **[USA for UNHCR](https://www.unrefugees.org/)** - Humanitarian organization
-- Additional sources listed on our [Sources page](/sources/)
+- Additional sources listed on our [Sources page]({{ '/sources/' | absolute_url }})
 
 ### Acknowledgments
 
@@ -52,4 +52,4 @@ For more information about Wax, visit the [documentation wiki](https://minicomp.
 
 ---
 
-[← Back to Home](/)
+[← Back to Home]({{ '/' | absolute_url }})

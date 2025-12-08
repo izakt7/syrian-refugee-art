@@ -68,5 +68,5 @@ Share these facts to help combat misinformation and promote understanding:
 
 ---
 
-[← Back to Home](/)
+[← Back to Home]({{ '/' | absolute_url }})
 
