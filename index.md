@@ -21,6 +21,30 @@ This exhibition brings together artworks created by Syrian artists and refugees 
   <a href="/contact-rep/" class="btn btn-tertiary" style="padding: 12px 24px; background-color: #dc3545; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Message Your Rep</a>
 </div>
 
+<div class="impact-counter-home" style="margin: 30px 0; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; text-align: center;">
+  <h4 style="color: white; margin-bottom: 10px;">Community Impact</h4>
+  <div style="font-size: 2em; font-weight: bold; margin-bottom: 5px;" id="home-total-actions">0</div>
+  <div style="opacity: 0.9;">actions taken by visitors</div>
+  <a href="/impact/" style="display: inline-block; margin-top: 15px; padding: 8px 16px; background-color: white; color: #667eea; text-decoration: none; border-radius: 4px; font-weight: bold;">View Impact Dashboard →</a>
+</div>
+
+<script>
+function updateHomeImpactCounter() {
+  if (typeof localStorage !== 'undefined') {
+    var actions = JSON.parse(localStorage.getItem('syrianRefugeeArtActions') || '{}');
+    var totalShares = actions['total_share'] || 0;
+    var totalComparisons = actions['total_compare'] || 0;
+    var totalActions = totalShares + totalComparisons;
+    var counter = document.getElementById('home-total-actions');
+    if (counter) {
+      counter.textContent = totalActions.toLocaleString();
+    }
+  }
+}
+document.addEventListener('DOMContentLoaded', updateHomeImpactCounter);
+setInterval(updateHomeImpactCounter, 5000);
+</script>
+
 ### Explore the Collection
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 30px 0;">
