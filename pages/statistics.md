@@ -224,5 +224,5 @@ All statistics are sourced from verified humanitarian organizations. For complet
 
 ---
 
-[← Back to Home](/)
+[← Back to Home]({{ '/' | absolute_url }})
 
